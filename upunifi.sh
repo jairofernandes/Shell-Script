@@ -4,6 +4,8 @@ VERSION=$1
 TEMPDIR='/tmp/unifi'
 DATA=$(date +"%d%m%Y")
 
+mkdir $TEMPDIR
+
 wget -c https://dl.ui.com/unifi/$VERSION/UniFi.unix.zip -O $TEMPDIR/UniFi.unix.$VERSION.zip
 
 systemctl stop unifi
